@@ -27,7 +27,7 @@ int main(int ac, char **av)
 		check_file_type(av[1]);
 		check_valid_map(av[1], &mlx);
 		read_and_fill_map(av[1], &mlx);
-		print(&mlx);
+		// print(&mlx);
 		__create_window(&mlx);
 		draw(&mlx);
 		mlx_key_hook(mlx.mlx, player_move, &mlx);
@@ -35,9 +35,4 @@ int main(int ac, char **av)
 	}
 	else
 		__error(0, 0);
-
-	(void)map;
-	(void)player;
-
-	return (0);
 }
